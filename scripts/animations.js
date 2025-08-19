@@ -8,10 +8,7 @@ export const runOnLoad = function (fn) {
 
 //Stop initial display of statuic version of the page before js loads
 window.addEventListener("DOMContentLoaded", () => {
-  console.log("loaded");
-  setTimeout(() => {
-    document.body.classList.remove("is-loading");
-  }, 200);
+  document.body.classList.remove("is-loading");
 });
 
 const isMobile = window.innerWidth < 1024;
