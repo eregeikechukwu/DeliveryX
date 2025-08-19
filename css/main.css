@@ -29,6 +29,11 @@ body {
   overflow-x: hidden;
 }
 
+body.is-loading {
+  visibility: hidden;
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 1270px;
