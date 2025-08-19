@@ -1,0 +1,37 @@
+@use "../abstracts//functions" as *;
+@use "../abstracts//variables" as *;
+@use "../abstracts//mixins" as *;
+
+.partners {
+  &__text {
+    text-align: center;
+    max-width: rem(700);
+
+    p {
+      margin-top: rem(16);
+    }
+  }
+
+  &__grid {
+    width: 100%;
+    margin-top: rem(110);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    gap: rem(50);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img {
+        margin-bottom: rem(32);
+      }
+      h4 {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+}

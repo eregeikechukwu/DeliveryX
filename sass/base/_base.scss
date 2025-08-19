@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 112.5%; // 1rem = 18px;
+  scroll-behavior: smooth;
+  @include font-size-responsive(100%, 100%, 112.5%);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  color: $color-dark;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1270px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include respond-to-abs(mobile) {
+    padding: 0 1rem;
+  }
+}

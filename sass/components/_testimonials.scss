@@ -1,0 +1,88 @@
+@use "../abstracts//functions" as *;
+@use "../abstracts//variables" as *;
+@use "../abstracts//mixins" as *;
+
+.testimonials {
+  background-color: $color-background-neutral;
+
+  &__head {
+    max-width: rem(620);
+    text-align: center;
+  }
+
+  &__grid {
+    margin-top: rem(70);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(450), 1fr));
+    gap: rem(28);
+
+    @include respond-to-abs(medium) {
+      grid-template-columns: repeat(1, minmax(rem(100), 1fr));
+    }
+
+    &__item {
+      background-color: $color-background;
+      @include shadow-neutral;
+      border-radius: rem(24);
+      padding: rem(98) rem(66);
+      transition: all 0.5s;
+
+      @include respond-to-abs(medium) {
+        padding: rem(68) rem(53);
+      }
+
+      @include respond-to-abs(small) {
+        padding: rem(58) rem(34);
+      }
+
+      &__header {
+        margin-bottom: rem(27);
+      }
+
+      &__readmore {
+        margin-top: rem(28);
+
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-to-abs(mobile) {
+          flex-direction: column-reverse;
+        }
+
+        a {
+          text-decoration: none;
+          color: $color-primary;
+          line-height: rem(19.999);
+          font-weight: 700;
+
+          @include respond-to-abs(mobile) {
+            margin-top: rem(9);
+          }
+
+          i {
+            transform: translate(0) rotate(-40deg);
+            width: 1rem;
+            transition: all 0.5s;
+          }
+        }
+        p {
+          font-size: rem(20);
+          line-height: 0.95em;
+          margin: 0;
+
+          @include respond-to-abs(small) {
+            font-size: rem(18);
+          }
+        }
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+      &:hover .testimonials__grid__item__readmore a i {
+        transform: translatex(5px) translateY(-5px) rotate(-40deg);
+      }
+    }
+  }
+}

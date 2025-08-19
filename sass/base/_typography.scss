@@ -1,0 +1,75 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.h1 {
+  font-size: rem(62);
+  line-height: 1.161em;
+  font-weight: 700;
+
+  @include respond-to-abs(large) {
+    font-size: rem(52);
+  }
+
+  @include respond-to-abs(mobile) {
+    font-size: rem(36);
+  }
+}
+
+.h2 {
+  font-size: rem(44);
+  line-height: 1.22em;
+  font-weight: 700;
+
+  @include respond-to-abs(mobile) {
+    font-size: rem(28);
+  }
+}
+
+.h3 {
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: rem(34.008);
+  margin-bottom: rem(32);
+}
+
+h4 {
+  font-size: rem(28);
+  line-height: 1.429em;
+  font-weight: 700;
+
+  @include respond-to-abs(small) {
+    font-size: rem(24);
+  }
+}
+
+.header {
+  color: $color-primary;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: rem(1.08);
+  line-height: rem(19.998);
+  text-transform: uppercase;
+  margin-bottom: rem(12);
+}
+
+p {
+  font-size: 1rem;
+  color: $color-neutral;
+  line-height: rem(30.006);
+}
+
+a {
+  text-decoration: none;
+
+  &:visited,
+  &:active {
+    color: inherit;
+  }
+}
+
+li {
+  font-size: 1rem;
+  line-height: rem(19.998);
+  color: $color-neutral;
+}

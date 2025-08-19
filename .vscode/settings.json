@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": true
+}
+// This file contains settings for the Live Sass Compiler extension in Visual Studio Code.

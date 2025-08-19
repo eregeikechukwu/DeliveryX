@@ -1,0 +1,56 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about {
+  padding-block: $section-padding-block;
+
+  @include respond-to-abs(medium) {
+    padding-block: $section-padding-block-small;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-row-gap: rem(100);
+    grid-column-gap: rem(28);
+
+    @include respond-to-abs(large) {
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+
+    div {
+      align-self: center;
+      &:nth-child(2) {
+        padding-left: rem(81);
+
+        @include respond-to-abs(large) {
+          padding: 0;
+          grid-row: 1/2;
+        }
+      }
+
+      @include respond-to-abs(large) {
+        max-width: rem(680);
+      }
+    }
+
+    &__image {
+      max-width: rem(561);
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: rem(16);
+        // box-shadow: 0 3px 12px #1212120f;
+      }
+    }
+
+    &__content {
+      h2 {
+        margin-bottom: rem(22);
+      }
+    }
+  }
+}

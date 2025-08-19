@@ -1,0 +1,133 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.shadow-light {
+  box-shadow: 0 14px 42px 0 #10101024;
+}
+
+.shadow-neutral {
+  box-shadow: 0px 2px 12px 0px #10101014;
+}
+
+.btn-primary {
+  font-size: rem(16);
+  text-align: center;
+  border-radius: rem(12);
+  padding: rem(18) rem(24);
+  font-weight: 500;
+  line-height: 1.111em;
+  transition: all 0.3s;
+}
+
+.section-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: $section-padding-block;
+
+  @include respond-to-abs(small) {
+    padding-block: $section-padding-block-small;
+  }
+}
+.page-link {
+  &:hover span {
+    transform: rotate(-180deg);
+  }
+
+  span {
+    display: inline-block;
+    transition: all 0.4s;
+    transform-origin: center;
+  }
+
+  span.fa {
+    font-size: rem(14);
+  }
+}
+
+.links {
+  width: max-content;
+  border-radius: 2rem;
+  display: flex;
+  gap: rem(100);
+  transition: all ease-out 0.4s;
+
+  @include respond-to-abs(mobile) {
+    flex-direction: column;
+    gap: rem(40);
+  }
+
+  h3 {
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: rem(22);
+    color: $color-dark;
+    margin-bottom: rem(40);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  a,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: $color-neutral;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary;
+      transition: all 0.4s;
+    }
+  }
+
+  &__group1 {
+    div {
+      display: flex;
+      gap: rem(40);
+    }
+  }
+}
+
+.drop-down-absolute {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -2;
+  transform: translateY(10px);
+  padding: rem(61) rem(41);
+  background-color: white;
+}
+
+.drop-down-hidden {
+  height: 0px;
+  opacity: 0;
+  background-color: none;
+
+  a {
+    @include respond-to-abs(small) {
+      font-size: rem(20) !important;
+    }
+  }
+
+  ul {
+    @include respond-to-abs(small) {
+      gap: rem(18);
+    }
+  }
+}
+
+.links.active {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+  height: 100%;
+}

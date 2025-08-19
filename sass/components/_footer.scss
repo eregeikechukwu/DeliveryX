@@ -1,0 +1,216 @@
+@use "../abstracts//functions" as *;
+@use "../abstracts//variables" as *;
+@use "../abstracts//mixins" as *;
+
+.footer {
+  &__content {
+    padding-block: rem(100) rem(118);
+    border-bottom: $border-height solid $border-color-light;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to-abs(medium) {
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: rem(20);
+      font-weight: 700;
+      line-height: rem(22);
+      color: $color-dark;
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    gap: rem(100);
+
+    @include respond-to-abs(mobile) {
+      flex-direction: column;
+      gap: rem(40);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+    }
+
+    a,
+    a:visited,
+    a:active {
+      text-decoration: none;
+      color: $color-neutral;
+
+      &:hover {
+        color: $color-primary;
+        transition: all 0.4s;
+      }
+    }
+
+    &__group1 {
+      div {
+        display: flex;
+        gap: rem(40);
+      }
+    }
+  }
+}
+
+.download-app {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-block: rem(70);
+  align-items: center;
+  // border-bottom: $border-height solid $border-color ;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: $border-height;
+    background-color: $border-color;
+    width: calc(100vw - 3rem);
+  }
+
+  @include respond-to-abs(large) {
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+  }
+
+  @include respond-to-abs(medium) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__info {
+    max-width: rem(450);
+    img {
+      width: rem(200);
+      height: auto;
+      margin-bottom: rem(24);
+      @include logo;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(26);
+    @include respond-to-abs(medium) {
+      flex-direction: column;
+      width: 100%;
+    }
+    button {
+      padding: rem(20) rem(15);
+      @include primary-button;
+      @include center-child;
+
+      img {
+        width: rem(28);
+        height: auto;
+        margin-right: rem(8);
+      }
+    }
+  }
+}
+
+.highlight {
+  padding-bottom: rem(4);
+  position: relative;
+  font-size: 1rem;
+  color: $color-primary !important;
+  font-weight: 700;
+  transition: all 0.4s;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-primary;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    color: $color-dark !important;
+
+    &::after {
+      background-color: $color-dark;
+    }
+  }
+}
+
+.available-in {
+  @include respond-to-abs(large) {
+    width: 50%;
+  }
+  @include respond-to-abs(mobile) {
+    margin-top: rem(68);
+  }
+
+  &__grid {
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(rem(250), 1fr));
+    grid-row-gap: rem(13);
+    grid-column-gap: rem(29);
+    white-space: nowrap;
+    max-width: rem(501);
+
+    @include respond-to-abs(large) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @include respond-to(small) {
+      grid-template-columns: repeat(2, minmax(rem(250), 1fr));
+      grid-column-gap: rem(39);
+      margin-top: rem(78);
+    }
+    @include respond-to-abs(mobile) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: rem(18);
+
+      img {
+        border-radius: rem(24);
+      }
+
+      h5 {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  padding-block: rem(31);
+  color: $color-neutral;
+
+  @include center-child;
+
+  @include respond-to(mobile) {
+    padding-block: rem(25);
+  }
+
+  span {
+    color: $color-primary;
+    font-weight: 700;
+  }
+}

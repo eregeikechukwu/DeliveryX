@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeliveryX</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Navbar -->
+      <header class="nav">
+        <div class="nav__container">
+          <div class="nav__logo"><img src="images/logo.svg" /></div>
+          <nav class="nav__links-container">
+            <li class="nav__links">
+              <a href="/">Home</a><a href="/">About</a><a href="/">Pricing</a
+              ><a class="page-link" href="#" onclick="return false"
+                >Pages <span class="fa fa-angle-down" aria-hidden="true"></span
+              ></a>
+              <a href="/">Cart(0)</a>
+            </li>
+            <!-- Links dropdown -->
+            <div class="hidden-links links shadow-light drop-down-absolute">
+              <div class="links__group1">
+                <h3>Menu</h3>
+                <div>
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/">Blog posts</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="/">Plans</a></li>
+                    <li><a href="/">Plan single</a></li>
+                    <li><a href="/">Register</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="links__group2">
+                <h3>Utility Pages</h3>
+                <div>
+                  <ul>
+                    <li><a href="/">Start here</a></li>
+                    <li><a href="/">Styleguide</a></li>
+                    <li><a href="/">404 not found</a></li>
+                    <li><a href="/">Password protected</a></li>
+                    <li><a href="/">Licenses</a></li>
+                    <li><a href="/">Changelog</a></li>
+
+                    <h2>
+                      <a
+                        class="highlight"
+                        href="https://github.com/eregeikechukwu"
+                      >
+                        Browse More Templates
+                      </a>
+                    </h2>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <a class="mobile-nav__cart" href="/">Cart(0)</a>
+            <button class="nav__download btn-primary">Download app</button>
+            <button class="nav__register btn-primary">Register</button>
+
+            <!-- Mobile nav -->
+            <div class="mobile-nav">
+              <label for="nav-toggle" id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile Nav menu -->
+      <div id="mobileMenu" class="mobile-nav__menu">
+        <li class="mobile-nav__links">
+          <a href="/">Home</a><a href="/">About</a><a href="/">Pricing</a
+          ><a class="page-link" href="#" onclick="return false"
+            >Pages <span class="fa fa-angle-down" aria-hidden="true"></span
+          ></a>
+
+          <!-- Links dropdown -->
+          <div class="hidden-links links drop-down-hidden">
+            <div class="links__group1">
+              <h3>Menu</h3>
+              <div>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Contact</a></li>
+                  <li><a href="/">Blog</a></li>
+                  <li><a href="/">Blog posts</a></li>
+                </ul>
+                <ul>
+                  <li><a href="/">Plans</a></li>
+                  <li><a href="/">Plan single</a></li>
+                  <li><a href="/">Register</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="links__group2">
+              <h3>Utility Pages</h3>
+              <div>
+                <ul>
+                  <li><a href="/">Start here</a></li>
+                  <li><a href="/">Styleguide</a></li>
+                  <li><a href="/">404 not found</a></li>
+                  <li><a href="/">Password protected</a></li>
+                  <li><a href="/">Licenses</a></li>
+                  <li><a href="/">Changelog</a></li>
+
+                  <h2>
+                    <a
+                      class="highlight"
+                      href="https://github.com/eregeikechukwu"
+                    >
+                      Browse More Templates
+                    </a>
+                  </h2>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <button>Get started</button>
+      </div>
+
+      <!-- Hero section -->
+      <section class="hero container">
+        <div class="hero__content">
+          <div class="hero__content__text">
+            <header class="header">About Deliver X</header>
+            <h1 class="h1">
+              We are here to help amazing restaurants get great customers
+            </h1>
+            <p>
+              At morbi adipiscing sit sed consectetur senectus Dignissim sed
+              amet tincidunt vitae ultricies ultrices amet fermentum amet neque
+              et id sed lacinia massa pretium aliquam libero et.
+            </p>
+          </div>
+          <div class="hero__content__images">
+            <img
+              class="hero__content__images__image"
+              src="./images//hero background image.png"
+              alt="hero"
+            />
+            <img
+              class="shadow-light floating-img-1"
+              src="images/hero burger image.png"
+            />
+            <img
+              class="shadow-light floating-img-2"
+              src="images/delivery hero image.svg"
+            />
+          </div>
+        </div>
+        <div class="hero__stats fade-in">
+          <div class="hero__stats__item">
+            <div class="hero__stats__item__count">10M<span>+</span></div>
+            <p>Happy Customers</p>
+          </div>
+          <div class="hero__stats__item">
+            <div class="hero__stats__item__count">500K<span>+</span></div>
+            <p>Restaurants available</p>
+          </div>
+          <div class="hero__stats__item">
+            <div class="hero__stats__item__count">30M<span>+</span></div>
+            <p>successful deliveries</p>
+          </div>
+          <div class="hero__stats__item">
+            <div class="hero__stats__item__count">99.9<span>%</span></div>
+            <p>Customer satisfaction</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section class="about container">
+        <div class="about__grid">
+          <!-- First Block -->
+          <div class="about__grid__image scale-in shadow-light">
+            <img src="images/delivery-guy.jpeg" alt="Delivery guy" />
+          </div>
+          <div class="about__grid__content">
+            <header class="header">About Us</header>
+            <h2 class="h2">Our company started back in 2016</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur.
+            </p>
+          </div>
+
+          <!-- Second Block -->
+          <div class="about__grid__content">
+            <header class="header">Our Mission</header>
+            <h2 class="h2">Our mission is to disrupt the food industry</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit.
+            </p>
+          </div>
+          <div class="about__grid__image scale-in shadow-light">
+            <img src="images/app.jpeg" alt="Phone App" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Story section -->
+      <section class="story container">
+        <div class="story__head">
+          <header class="header">Our journey</header>
+          <h2 class="h2">It has been a long but incredible journey</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu
+            egestas morbi sem vulputate etiam facilisis pellentesque ut quis.
+          </p>
+          <button class="btn-primary">Download App</button>
+        </div>
+
+        <!-- Story timeline -->
+        <div class="story__timeline">
+          <div class="story__timeline__item scale-in">
+            <header class="header">2016</header>
+            <h3 class="h3">Deliver X was founded</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam.
+            </p>
+          </div>
+
+          <div class="story__timeline__item scale-in">
+            <header class="header">2018</header>
+            <h3 class="h3">Raised Series A at $50M valuation</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam.
+            </p>
+          </div>
+
+          <div class="story__timeline__item scale-in">
+            <header class="header">2019</header>
+            <h3 class="h3">Raised Series B at $600M valuation</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam.
+            </p>
+          </div>
+
+          <div class="story__timeline__item scale-in">
+            <header class="header">2022</header>
+            <h3 class="h3">Raised Series C at $3B valuation</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners section -->
+      <section class="partners section-flex container">
+        <div class="partners__text">
+          <header class="header">Our partners</header>
+          <h2 class="h2">
+            We don&apos;t walk alone, Deliver X works thanks to our partners
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu
+            egestas morbi sem vulputate etiam facilisis pellentesque ut quis.
+          </p>
+        </div>
+        <div class="partners__grid">
+          <div class="partners__grid__item">
+            <img class="fade-in" src="images/customers.svg" alt="customers" />
+            <h4>Customers</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+              phasellus mollis sit aliquam sit nullam.
+            </p>
+          </div>
+          <div class="partners__grid__item">
+            <img
+              class="fade-in"
+              src="images/restaurants.svg"
+              alt="restaurants"
+            />
+            <h4>Restaurants</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+              phasellus mollis sit aliquam sit nullam.
+            </p>
+          </div>
+          <div class="partners__grid__item">
+            <img class="fade-in" src="images/riders.svg" alt="riders" />
+            <h4>Riders</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+              phasellus mollis sit aliquam sit nullam.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials section -->
+      <section class="testimonials section-flex container">
+        <div class="testimonials__head">
+          <header class="header">Press & News</header>
+          <h2 class="h2">See what the press says about Deliver X</h2>
+        </div>
+
+        <div class="testimonials__grid fade-in">
+          <div class="testimonials__grid__item">
+            <img
+              class="testimonials__grid__item__header"
+              src="images/company-logo.svg"
+              alt="testimonial"
+            />
+            <h4>Deliver X raises $26M in series B funding for growth</h4>
+            <div class="testimonials__grid__item__readmore">
+              <a href="https://nelson-erege-portfolio.vercel.app"
+                >Read more <i class="fa fa-arrow-right" aria-hidden="true"></i
+              ></a>
+              <p>January 22, 2023</p>
+            </div>
+          </div>
+
+          <div class="testimonials__grid__item">
+            <img
+              class="testimonials__grid__item__header"
+              src="images/industry-logo.svg"
+              alt="testimonial"
+            />
+            <h4>
+              Deliver X claims to be the #1 player in the delivery industry
+            </h4>
+            <div class="testimonials__grid__item__readmore">
+              <a href="https://nelson-erege-portfolio.vercel.app"
+                >Read more <i class="fa fa-arrow-right" aria-hidden="true"></i
+              ></a>
+              <p>Nov 15, 2022</p>
+            </div>
+          </div>
+
+          <div class="testimonials__grid__item">
+            <img
+              class="testimonials__grid__item__header"
+              src="images/curbside-logo.svg"
+              alt="testimonial"
+            />
+            <h4>Introducing curbside ordering with Deliver X</h4>
+            <div class="testimonials__grid__item__readmore">
+              <a href="https://nelson-erege-portfolio.vercel.app"
+                >Read more <i class="fa fa-arrow-right" aria-hidden="true"></i
+              ></a>
+              <p>Sep 18, 2022</p>
+            </div>
+          </div>
+
+          <div class="testimonials__grid__item">
+            <img
+              class="testimonials__grid__item__header"
+              src="images/pos-logo.svg"
+              alt="testimonial"
+            />
+            <h4>Introducing the Square POS integration with Deliver X</h4>
+            <div class="testimonials__grid__item__readmore">
+              <a href="https://nelson-erege-portfolio.vercel.app"
+                >Read more <i class="fa fa-arrow-right" aria-hidden="true"></i
+              ></a>
+              <p>March 12, 2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer container">
+        <!-- Download app -->
+        <div class="download-app fade-in-opacity">
+          <div class="download-app__info">
+            <img alt="logo" src="./images/logo.svg" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+
+          <div class="download-app__buttons">
+            <button class="btn-primary">
+              <img alt="android" src="./images/svgs/apple.svg" /> Download for
+              IOS
+            </button>
+            <button class="btn-primary">
+              <img alt="android" src="./images/svgs/android.svg" /> Download for
+              Android
+            </button>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer__content">
+          <div class="links">
+            <div class="links__group1">
+              <h3>Menu</h3>
+              <div>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Contact</a></li>
+                  <li><a href="/">Blog</a></li>
+                  <li><a href="/">Blog posts</a></li>
+                </ul>
+                <ul>
+                  <li><a href="/">Plans</a></li>
+                  <li><a href="/">Plan single</a></li>
+                  <li><a href="/">Register</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="links__group2">
+              <h3>Utility Pages</h3>
+              <div>
+                <ul>
+                  <li><a href="/">Start here</a></li>
+                  <li><a href="/">Styleguide</a></li>
+                  <li><a href="/">404 not found</a></li>
+                  <li><a href="/">Password protected</a></li>
+                  <li><a href="/">Licenses</a></li>
+                  <li><a href="/">Changelog</a></li>
+
+                  <h2>
+                    <a
+                      class="highlight"
+                      href="https://github.com/eregeikechukwu"
+                    >
+                      Browse More Templates
+                    </a>
+                  </h2>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Availabe countries -->
+          <div class="available-in">
+            <h3>Available in</h3>
+            <div class="available-in__grid">
+              <div class="available-in__grid__item">
+                <img src="./images/SanFracisco.svg" alt="San Francisco" />
+                <h5>San Francisco, CA</h5>
+              </div>
+              <div class="available-in__grid__item">
+                <img src="./images/newyork.svg" alt="New York" />
+                <h5>New York, NY</h5>
+              </div>
+              <div class="available-in__grid__item">
+                <img src="./images/losangeles.svg" alt="San Francisco" />
+                <h5>Los Angeles, CA</h5>
+              </div>
+              <div class="available-in__grid__item">
+                <img src="./images/seattle.svg" alt="San Francisco" />
+                <h5>Seattle, WA</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div>
+            Copyright © Deliver X | Designed by <span>BRIX Templates</span> -
+            Powered by
+            <span>Webflow</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-Ho+d8M4oOCgOLdz6m5j1cyh6OS3M6KQ3yXtSGtHTeOzDwYfWmuvpB2Yl1nLpSL43"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- scripts -->
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

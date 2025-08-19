@@ -1,0 +1,39 @@
+@use "../abstracts/functions" as *;
+
+//Breakpoints
+$min-mobile: 300px;
+$max-mobile: 576px;
+
+$min-small: 577px;
+$max-small: 768px;
+
+$min-medium: 769px;
+$max-medium: 992px;
+
+$max-large: 1219px;
+$min-large: 992px;
+$min-extra-large: 1220px;
+$max-extra-large: 1500px;
+
+//colors
+$color-dark: #121212;
+$color-neutral: #656565;
+$color-background: #fff;
+$color-background-neutral: #fafafa;
+
+$color-primary: #ff5634;
+$color-primary-hover: darken($color-primary, 15%);
+
+$nav-height: rem(120);
+$nav-height-small: rem(86);
+$section-padding-block: rem(166);
+$section-padding-block-small: rem(96);
+
+//border
+$border-color: #cacaca;
+$border-height: 1px;
+$border-color-light: #ededed;
+
+//fonts
+$font-primary: "Metropolis", sans-serif;
+$font-secondary: "Poppins", sans-serif;

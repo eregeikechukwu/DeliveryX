@@ -1,0 +1,151 @@
+@use "../abstracts//variables" as *;
+@use "../abstracts//functions" as *;
+@use "../abstracts//mixins" as *;
+
+.hero {
+  margin-top: $nav-height;
+  padding: rem(70) 1.5rem;
+  background-color: $color-background-neutral;
+
+  @include respond-to-abs(small) {
+    margin-top: $nav-height-small;
+  }
+
+  &__content {
+    display: flex;
+    gap: rem(28);
+    height: max-content;
+
+    @include respond-to-abs(large) {
+      flex-direction: column;
+      @include center-child;
+    }
+
+    &__text {
+      padding: rem(99) 0;
+      // flex-basis: rem(623);
+
+      @include respond-to-abs(large) {
+        text-align: center;
+        padding: 0;
+        max-width: rem(680);
+      }
+
+      header {
+        margin-bottom: rem(29) !important;
+      }
+    }
+
+    &__images {
+      width: 100%;
+      min-width: rem(500);
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      //  Default height ensures parent doesn’t collapse
+      aspect-ratio: 3 / 2;
+
+      // Fallback for browsers that don't support aspect-ratio
+      min-height: rem(500);
+
+      @include respond-to-abs(large) {
+        height: fit-content;
+        max-width: rem(500);
+        aspect-ratio: unset;
+        max-height: rem(600);
+        background-size: contain;
+      }
+      @include respond-to-abs(small) {
+        min-width: rem(250);
+        width: 100%;
+        background-size: contain;
+      }
+
+      &__image {
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      & img {
+        position: absolute;
+
+        &:nth-child(2) {
+          top: 33%;
+          left: -10%;
+          width: 44.8%;
+          border-radius: rem(16);
+
+          @include respond-to-abs(large) {
+            top: 20%;
+          }
+
+          @include respond-to-abs(small) {
+            top: 10%;
+          }
+        }
+
+        &:nth-child(3) {
+          bottom: 8%;
+          right: -10%;
+          width: 54.8%;
+          border-radius: rem(12);
+
+          @include respond-to-abs(small) {
+            bottom: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  &__stats {
+    margin-top: rem(105);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to-abs(medium) {
+      margin-top: rem(80);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(40);
+      width: fit-content;
+      place-self: center;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &__count {
+        font-size: rem(56);
+        line-height: 1.179em;
+        font-weight: 700;
+        margin-bottom: rem(8);
+
+        @include respond-to-abs(medium) {
+          font-size: rem(40);
+          margin-bottom: 0;
+        }
+
+        & span {
+          color: $color-primary;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        line-height: 1.14em;
+        @include respond-to-abs(large) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

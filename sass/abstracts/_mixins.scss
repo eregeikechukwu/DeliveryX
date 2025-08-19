@@ -1,0 +1,101 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+
+@mixin primary-button {
+  border: none;
+  background-color: $color-primary;
+  color: white;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+
+@mixin shadow-neutral {
+  box-shadow: 0px 2px 12px 0px #10101014;
+}
+
+@mixin center-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin logo {
+  transition: all 0.4s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+//Responsive mixin Function
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: $min-mobile) and (max-width: $max-mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media (min-width: $min-small) and (max-width: $max-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media (min-width: $min-medium) and (max-width: $max-medium) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media (min-width: $min-large) and (max-width: $max-large) {
+      @content;
+    }
+  }
+  @if $breakpoint == extra-large {
+    @media (min-width: $min-extra-large) and (max-width: $max-extra-large) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-abs($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $max-mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media (max-width: $max-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media (max-width: $min-medium) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media (max-width: $max-large) {
+      @content;
+    }
+  }
+  @if $breakpoint == extra-large {
+    @media (max-width: $max-extra-large) {
+      @content;
+    }
+  }
+}
+
+//Responsive Typography
+@mixin font-size-responsive($mobile, $medium, $large) {
+  font-size: $large;
+
+  @include respond-to-abs(medium) {
+    font-size: $medium;
+  }
+
+  @include respond-to(mobile) {
+    font-size: $mobile;
+  }
+}
