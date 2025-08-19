@@ -7,7 +7,8 @@ export const runOnLoad = function (fn) {
 };
 
 //Stop initial display of statuic version of the page before js loads
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+  console.log("loaded");
   document.body.classList.remove("is-loading");
 });
 
